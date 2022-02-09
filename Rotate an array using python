@@ -1,0 +1,10 @@
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+    
+        n=len(nums)
+        ls=[0]*n #empty array
+        Noofshifts=k%n
+        for i in range(n):
+            ls[(i+Noofshifts)%n]=nums[i]
+        for i in range(n):
+            nums[i]=ls[i]
